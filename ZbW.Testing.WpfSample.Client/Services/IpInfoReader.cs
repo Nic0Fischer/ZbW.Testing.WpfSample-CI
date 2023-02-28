@@ -10,8 +10,7 @@ namespace ZbW.Testing.WpfSample.Client.Services
 
         public IpInfoReader()
         {
-            string ApiUrl = "https://ipinfo.io";
-            _ipInfoApi = RestClient.For<IIpInfoApi>(ApiUrl);
+            _ipInfoApi = RestClient.For<IIpInfoApi>("https://ipinfo.io");
         }
 
         public IpDataObject GetData(string ip)
